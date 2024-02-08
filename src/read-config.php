@@ -108,7 +108,7 @@ function error($str, $line = null) {
 }
 
 function parseOpts($opts) {
-    if (isset($opts['h']) || isset($opts['help'])) {
+    if (count($opts) === 0|| isset($opts['h']) || isset($opts['help'])) {
         write('# read-config');
         write(' - An nginx log parser.');
         write('This script will read nginx formatted configuration files and output its best guess as to what the general server blocks are along with any aliases and document root data. It will also optionally output to a .csv file of your choosing (see options).');
