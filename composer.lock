@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "60ba8f1968962be197a67a2892436599",
+    "packages": [
+        {
+            "name": "sashabo/nginx-conf-parser",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sasha-bo/nginx-conf-parser.git",
+                "reference": "4175366e87405644f7a39f1944e7452005a8f2bb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sasha-bo/nginx-conf-parser/zipball/4175366e87405644f7a39f1944e7452005a8f2bb",
+                "reference": "4175366e87405644f7a39f1944e7452005a8f2bb",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.25",
+                "phpstan/phpstan": "^1.9",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.4",
+                "phpstan/phpstan-webmozart-assert": "^1.2",
+                "phpunit/phpunit": "^10"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SashaBo\\NginxConfParser\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sasha Bo"
+                }
+            ],
+            "description": "Parsing nginx.conf files and following includes",
+            "support": {
+                "issues": "https://github.com/sasha-bo/nginx-conf-parser/issues",
+                "source": "https://github.com/sasha-bo/nginx-conf-parser/tree/1.2.1"
+            },
+            "time": "2024-02-03T09:27:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

@@ -1,0 +1,15 @@
+{
+    "name": "neilanderson/nginx-configs",
+    "type": "project",
+    "description": "A parser to help developers understand what sites are hosted with nginx",
+    "authors": [
+        {
+            "name": "Neil Anderson",
+            "email": "neil@cld.agency"
+        }
+    ],
+    "license": "proprietary",
+    "require": {
+        "sashabo/nginx-conf-parser": "^1.2"
+    }
+}
