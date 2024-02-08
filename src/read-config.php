@@ -31,17 +31,17 @@ foreach ($opts['c'] as $file) {
                 write('# Server ' . implode(', ', $server['domains']));
                 write(' - Root: ' . $server['root']);
                 write('');
+            }
 
-                if (isset($out)) {
-                    $data = [
-                        $configName,
-                        $server['domains'][0],
-                        implode('\n', array_slice($server['domains'], 1)),
-                        $server['root']
-                    ];
+            if (isset($out)) {
+                $data = [
+                    $configName,
+                    $server['domains'][0],
+                    implode("\n", array_slice($server['domains'], 1)),
+                    ($server['root'] ?? '')
+                ];
 
-                    fputcsv($out, $data);
-                }
+                fputcsv($out, $data);
             }
         }
     }
@@ -86,14 +86,15 @@ function processServerRows(SashaBo\NginxConfParser\Row $server) {
         }
 
         // This does sort of work but it's not reliable so I don't want it for now
-        // if ($row->name == 'location' && in_array('/', $row->values)) {
-        //     foreach ($row->rows as $locationRow) {
-        //         if ($locationRow->name === 'return') {
-        //             // add a Redirect
-        //             $result['redirects'][] = implode(' ', $locationRow->values);
-        //         }
-        //     }
-        // }
+        if ($row->name == 'location' && in_array('/', $row->values)) {
+            // var_dump($row);
+            // foreach ($row->rows as $locationRow) {
+            //     if ($locationRow->name === 'return') {
+            //         // add a Redirect
+            //         $result['redirects'][] = implode(' ', $locationRow->values);
+            //     }
+            // }
+        }
     }
 
     return $result;
